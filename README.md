@@ -4,7 +4,7 @@ An AI-powered phishing website detection platform that helps users identify mali
 
 ---
 
-## 📸 Screenshots
+ ## 📸 Screenshots
 
 ### Home Page
 
@@ -17,8 +17,6 @@ An AI-powered phishing website detection platform that helps users identify mali
 ![Detection Result](./assets/detection-result.png)
 
 *Detailed phishing analysis showing risk score, confidence level, and prediction result.*
-
----
 
 ## 🚀 Features
 
