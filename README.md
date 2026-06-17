@@ -1,87 +1,128 @@
-Here's a professional README you can directly paste into your GitHub repository **PhishGaurd**.
+# 🛡️ PhishGuard AI
 
-```markdown
-# 🛡️ PhishGaurd
+An AI-powered phishing website detection platform that helps users identify malicious and fraudulent URLs before they cause harm. PhishGuard AI leverages Machine Learning to analyze website URLs and provide risk scores, confidence levels, and phishing predictions through an intuitive web interface.
 
-PhishGaurd is a Machine Learning-powered phishing URL detection system designed to identify malicious websites and protect users from phishing attacks. The application analyzes URLs using trained machine learning models and provides real-time predictions through a user-friendly web interface.
+---
+
+## 📸 Screenshots
+
+### Home Page
+
+![Home Page](assets/homepage.png)
+
+*Modern landing page with AI-powered URL analysis interface.*
+
+### Detection Result
+
+![Detection Result](assets/detection-result.png)
+
+*Detailed phishing analysis showing risk score, confidence level, and prediction result.*
 
 ---
 
 ## 🚀 Features
 
-- Detects phishing and legitimate URLs
-- Machine Learning-based classification
-- Simple and responsive web interface
-- Fast prediction results
-- Easy deployment and scalability
-- Trained on phishing URL datasets
+* 🔍 Real-time URL phishing detection
+* 🤖 Machine Learning-based threat analysis
+* 📊 Risk score and confidence metrics
+* ⚡ Fast and accurate predictions
+* 🎨 Modern and responsive user interface
+* 🔒 Cybersecurity-focused protection
+* 📈 Interactive analysis dashboard
 
 ---
 
-## 🏗️ Project Structure
+## 🧠 How It Works
 
+1. Enter a website URL into the search box.
+2. Click **Analyze**.
+3. The frontend sends the URL to the Flask backend.
+4. URL features are extracted and processed.
+5. The trained Machine Learning model predicts whether the website is:
+
+   * ✅ Legitimate
+   * ⚠️ Phishing
+6. Results are displayed with:
+
+   * Risk Score
+   * Threat Score
+   * Detection Confidence
+   * Prediction Result
+
+---
+
+## 🏗️ Project Architecture
+
+```text
+User Input URL
+       │
+       ▼
+ React Frontend
+       │
+       ▼
+ Flask API
+       │
+       ▼
+ Feature Extraction
+       │
+       ▼
+ ML Model Prediction
+       │
+       ▼
+ Analysis Dashboard
 ```
-
-PhishGaurd/
-│
-├── backend/
-│ ├── app.py
-│ ├── train_model.py
-│ ├── model.pkl
-│ ├── requirements.txt
-│
-├── frontend/
-│ ├── src/
-│ ├── public/
-│ ├── package.json
-│
-├── dataset/
-│ ├── phishing.csv
-│
-└── README.md
-
-````
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- React.js
-- HTML5
-- CSS3
-- JavaScript
+
+* React.js
+* JavaScript
+* HTML5
+* CSS3
 
 ### Backend
-- Python
-- Flask
+
+* Python
+* Flask
 
 ### Machine Learning
-- Scikit-learn
-- Pandas
-- NumPy
+
+* Scikit-Learn
+* Pandas
+* NumPy
+
+### Development Tools
+
+* Git
+* GitHub
+* VS Code
 
 ---
 
-## 📊 Dataset
+## 📊 Sample Detection Output
 
-The model is trained on a phishing URL dataset containing:
-- URL features
-- Phishing labels
-- Legitimate website samples
+| Metric     | Value                                     |
+| ---------- | ----------------------------------------- |
+| Domain     | [www.rrp-mfg.com](http://www.rrp-mfg.com) |
+| Risk Score | 73/100                                    |
+| Confidence | 73%                                       |
+| Prediction | Phishing                                  |
 
 ---
 
 ## ⚙️ Installation
 
-### 1. Clone the Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/himanshu0508/PhishGaurd.git
 cd PhishGaurd
-````
+```
 
-### 2. Setup Backend
+### Backend Setup
 
 ```bash
 cd backend
@@ -91,33 +132,20 @@ python -m venv venv
 # Windows
 venv\Scripts\activate
 
-# Linux/Mac
-source venv/bin/activate
-
+# Install dependencies
 pip install -r requirements.txt
-```
 
-### 3. Train the Model
-
-```bash
-python train_model.py
-```
-
-### 4. Run Backend Server
-
-```bash
+# Run backend server
 python app.py
 ```
 
-Backend will start on:
+Backend will run on:
 
-```bash
+```text
 http://localhost:5000
 ```
 
----
-
-### 5. Setup Frontend
+### Frontend Setup
 
 Open a new terminal:
 
@@ -131,7 +159,7 @@ npm start
 
 Frontend will run on:
 
-```bash
+```text
 http://localhost:3000
 ```
 
@@ -139,45 +167,31 @@ http://localhost:3000
 
 ## 🎯 Usage
 
-1. Open the application in your browser.
-2. Enter a URL to analyze.
-3. Click **Scan**.
-4. View the prediction result:
-
-   * ✅ Legitimate Website
-   * ⚠️ Phishing Website
+1. Start both frontend and backend servers.
+2. Open the application in your browser.
+3. Enter the URL you want to analyze.
+4. Click **Analyze**.
+5. Review the phishing detection results.
 
 ---
 
-## 📈 Model Performance
+## 🔮 Future Enhancements
 
-| Metric    | Score |
-| --------- | ----- |
-| Accuracy  | ~95%+ |
-| Precision | High  |
-| Recall    | High  |
-
-*(Performance may vary depending on the dataset and model version.)*
-
----
-
-## 🔒 Why PhishGaurd?
-
-Phishing attacks are one of the most common cybersecurity threats. PhishGaurd helps users:
-
-* Avoid fake websites
-* Protect sensitive information
-* Detect malicious URLs instantly
-* Improve online security awareness
+* Browser Extension Support
+* Deep Learning-based Detection
+* Real-Time Threat Intelligence Integration
+* Website Screenshot Analysis
+* Email Phishing Detection
+* URL Reputation Database
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome!
+Contributions are welcome.
 
 1. Fork the repository
-2. Create a feature branch
+2. Create your feature branch
 
 ```bash
 git checkout -b feature-name
@@ -189,7 +203,7 @@ git checkout -b feature-name
 git commit -m "Add feature"
 ```
 
-4. Push to your branch
+4. Push to the branch
 
 ```bash
 git push origin feature-name
@@ -199,23 +213,16 @@ git push origin feature-name
 
 ---
 
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
-
 ## 👨‍💻 Author
 
 **Himanshu Phogat**
 
-* GitHub: [https://github.com/himanshu0508](https://github.com/himanshu0508)
+GitHub: https://github.com/himanshu0508
 
 ---
 
-⭐ If you found this project useful, consider giving it a star on GitHub!
+## ⭐ Support
 
-```
+If you found this project useful, consider giving it a ⭐ on GitHub.
 
-If your project uses a **Chrome Extension**, **Random Forest model**, or has specific files/endpoints, send me the repository structure (`tree /f` output or screenshot), and I'll create a more accurate, recruiter-friendly README.
-```
+Your support helps improve the project and encourages further development.
