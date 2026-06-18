@@ -116,7 +116,7 @@ User Input URL
 ### Clone Repository
 
 ```bash
-git clone https://github.com/himanshu0508/PhishGaurd.git
+git clone https://github.com/VanshChoudhary7/PhishGaurd.git
 cd PhishGaurd
 ```
 
@@ -213,9 +213,9 @@ git push origin feature-name
 
 ## 👨‍💻 Author
 
-**Himanshu Phogat**
+**Vansh Choudhary**
 
-GitHub: https://github.com/himanshu0508
+GitHub: https://github.com/VanshChoudhary7
 
 ---
 
