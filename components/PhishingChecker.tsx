@@ -7,25 +7,28 @@ export default function PhishingChecker() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  const handleCheck = async () => {
-    if (!url.trim()) return
-    setLoading(true)
-    setError('')
-    setResult(null)
+const handleCheck = async () => {
+  if (!url.trim()) return;
 
-    try {
-      const res = await fetch('http://localhost:5000/api/check-url', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url }),
-      })
-      const data = await res.json()
-      setResult(data)
-    } catch (err) {
-      setError('❌ Could not connect to server. Make sure backend is running.')
-    }
-    setLoading(false)
+  setLoading(true);
+  setError('');
+  setResult(null);
+
+  try {
+    const res = await fetch('https://phishgaurd-2-sqzi.onrender.com/check', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url }),
+    });
+
+    const data = await res.json();
+    setResult(data);
+  } catch (err) {
+    setError('❌ Could not connect to server.');
   }
+
+  setLoading(false);
+};
 
   return (
     <div className="flex flex-col items-center gap-6 p-8 max-w-2xl mx-auto">
