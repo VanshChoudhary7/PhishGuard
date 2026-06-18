@@ -9,24 +9,21 @@ export default function PhishingChecker() {
 
 const handleCheck = async () => {
   if (!url.trim()) return;
-
   setLoading(true);
   setError('');
   setResult(null);
-
   try {
-  const res = await fetch('https://phishgaurd-2-sqzi.onrender.com/api/check-url', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ url }),
-});
-
+    const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://phishgaurd-2-sqzi.onrender.com';
+    const res = await fetch(`${BACKEND_URL}/api/check-url`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url }),
+    });
     const data = await res.json();
     setResult(data);
   } catch (err) {
     setError('❌ Could not connect to server.');
   }
-
   setLoading(false);
 };
 
