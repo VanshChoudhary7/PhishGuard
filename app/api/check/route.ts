@@ -1,7 +1,7 @@
 export async function POST(req: Request) {
   const body = await req.json();
 
-  const res = await fetch("https://phishgaurd-2-sqzi.onrender.com/api/check", {
+  const res = await fetch("https://phishgaurd-2-sqzi.onrender.com/check", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
