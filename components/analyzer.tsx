@@ -84,6 +84,7 @@ export function Analyzer() {
   const [result, setResult] = useState<Result | null>(null)
   const { toast } = useToast()
 
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://phishgaurd-2-sqzi.onrender.com"
   async function analyze(e: React.FormEvent) {
     e.preventDefault()
     if (!url.trim()) {
@@ -94,7 +95,7 @@ export function Analyzer() {
     setResult(null)
 
     try {
-      const response = await fetch("http://localhost:5000/api/check-url", {
+      const response = await fetch(`${BACKEND_URL}/api/check-url`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),
