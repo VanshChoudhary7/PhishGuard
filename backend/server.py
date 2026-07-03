@@ -10,7 +10,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), 'ml'))
 from feature_extractor import extract_features
 
 app = Flask(__name__)
-CORS(app, origins=["https://phish-gaurd-one.vercel.app"])
+CORS(app, origins=["https://phish-guard-black-mu.vercel.app"])
 
 # Load model and datasets
 print("Loading model...")
